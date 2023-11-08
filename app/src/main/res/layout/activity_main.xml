@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="定位座標"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_GPS_JWD"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="障礙距離"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_JL"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:text="cm"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:gravity="left">
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="身體狀態"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/tv_STZT"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textSize="17sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="485dp"
+        android:orientation="vertical">
+
+        <com.google.android.gms.maps.MapView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            map:cameraZoom="15" />
+
+    </LinearLayout>
+
+    <LinearLayout
+
+            android:id="@+id/content"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center|bottom">
+
+            <Button
+                android:id="@+id/btn_close"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="退出"
+                android:textSize="20sp"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+</LinearLayout>
