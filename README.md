@@ -28,3 +28,23 @@
 現在，您已經成功將 Aliyun MQTT 專案複製到您的 Android Studio 中，可以開始編輯和運行代碼了。
 
 希望這個教學對您有所幫助！如果您有任何問題或需要進一步的協助，請隨時聯絡我們。
+
+## 已經完成的部分
+
+1. UI介面初步繁體化
+
+2. map功能新增(部分)
+
+## 需要修訂的部分
+
+1.無法正常使用座標顯示在map上
+
+2.可以用[這個](https://github.com/lukeyu1025/My_Application.git)我做到一半的map DEMO版程式去試試看問題在哪裡，這個程式是以一個固定座標去嘗試，然而依然無法正常顯示
+
+# Arduino Ide 使用
+
+1.下載 [Arduino code](https://github.com/lukeyu1025/grad_project_arduino.git)，這個版本是我改過繁體化，並且wifiname 以及 wifipassword改成我自己的。
+
+2. 在 Sketch -> include library -> add .Zip library 依序新增 雲端資料中 BaiduNetdiskDownload\014.基于arduino智能拐杖\用到的库 的所有內容
+
+3. 接下來的部分如果有需要再新增說明做法
