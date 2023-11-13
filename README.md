@@ -64,7 +64,7 @@
 3. [activity_main.xml](app/src/main/res/layout/activity_main.xml):
     main的xml(UI)檔
     
-4. [AliyunIoTSignUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/AliyunIoTSignUtil.java)
+4. [AliyunIoTSignUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/AliyunIoTSignUtil.java) 用來對客戶端設備進行身份驗證。驗證客戶端設備是否有權訪問該MQTT代理。ref：https://developer.aliyun.com/article/775935
  
 5. [NumberConvertUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/NumberConvertUtil.java)
 
