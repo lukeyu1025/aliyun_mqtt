@@ -49,9 +49,9 @@
 
 3. 接下來的部分如果有需要再新增說明做法
 
-#備註!!!
+# 備註!!!
 
-##anroid app 重要檔案索引位置
+## anroid app 重要檔案索引位置
 1. [AndroidManifest.xml](app/src/main/AndroidManifest.xml):
     用來設定使用到的ui及他的java檔
     設定API keys
