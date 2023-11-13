@@ -64,3 +64,7 @@
 4. [AliyunIoTSignUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/AliyunIoTSignUtil.java)
  
 5. [NumberConvertUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/NumberConvertUtil.java)
+
+# 實機畫面
+![螢幕擷取畫面 2023-11-13 190206](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/3d4abcf7-1d2e-478b-832d-228847515d9c)
+
