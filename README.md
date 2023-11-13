@@ -43,11 +43,14 @@
 
 # Arduino Ide 使用
 
-1.下載 [Arduino code](https://github.com/lukeyu1025/grad_project_arduino.git)，這個版本是我改過繁體化，並且wifiname 以及 wifipassword改成我自己的。
+1. [下載 Arduino code](https://github.com/lukeyu1025/grad_project_arduino.git)，wifiname 以及 wifipassword是我自己的(如有需要請自行更改)
 
-2. 在 Sketch -> include library -> add .Zip library 依序新增 雲端資料中 BaiduNetdiskDownload\014.基于arduino智能拐杖\用到的库 的所有內容
+2. 在 Sketch -> include library -> add .Zip library 依序新增 [下載 .zip 檔案](https://drive.google.com/drive/folders/13STSmsaVkMZMrOnQPTcPOoKlixBiJ3B0?usp=sharing)
+![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/7c239646-3d42-4795-be74-9872b10920ac)
+3. 選擇正確的 port 以及 board</br>
+![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/6fe07410-ae00-48be-91bd-b7a2e4a01fc8)
+4. Serial Monitor 選擇 115200 baud 以查看 Serial
 
-3. 接下來的部分如果有需要再新增說明做法
 
 # 備註!!!
 
@@ -70,13 +73,13 @@
 # 電路圖
 ![未命名](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/05bd4b87-a152-43c6-9f0b-be84c57c6573)
 # 元件
-# 1. board: esp32-s3
+1. board: esp32-s3</br>
 ![Q1](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/ea28c6d1-2dfa-41c4-a2f4-1f30d4899513)
-# 2. 6-Axis Accel & Gyro Sensor: mpu6050
+2. 6-Axis Accel & Gyro Sensor: mpu6050</br>
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/19846bf0-3e2c-41a1-aa43-b7c62f292ee8)
-# 3. passive buzzer module 
+3. passive buzzer module </br>
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/b8a4919f-8bdc-4d00-9761-de6a885b65d2)
-# 4. GPS Module Receiver: GT-U7 
+4. GPS Module Receiver: GT-U7 </br>
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/333f792e-d47d-453c-8393-5a78c1a699d2)
-# 5. Ultrasonic Distance Sensor: HC-SR04 
+5. Ultrasonic Distance Sensor: HC-SR04 </br>
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/7a12d8db-a872-4dd2-bfe6-60e51e008e18)
