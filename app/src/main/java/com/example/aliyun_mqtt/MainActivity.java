@@ -1,5 +1,6 @@
 package com.example.aliyun_mqtt;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -57,20 +58,16 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private int SDfg =0;
 
     private MapView mapView;
+    private GoogleMap map; // Declare a member variable to hold the GoogleMap object
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize the MapView
         mapView = findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
-
-        // Configure the map settings
-        mapView.getMapAsync(googleMap -> {
-            // Here, you can interact with the GoogleMap object and customize the map.
-        });
+        mapView.getMapAsync(this);
 
         TextView tv_GPS_JWD = findViewById(R.id.tv_GPS_JWD);
         TextView tv_JL = findViewById(R.id.tv_JL);
@@ -91,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         start_reconnect();
 
         handler = new Handler() {
-            @SuppressLint("SetTextI18n")
+            @SuppressLint({"SetTextI18n", "HandlerLeak"})
             public void handleMessage(Message msg) {
                 super.handleMessage(msg);
                 switch (msg.what) {
@@ -260,6 +257,37 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         }
     }
 
+    public LatLng oldLocation;
+    // Function to update the map's location
+    private void updateMapLocation(double latitude, double longitude) {
+        if (map != null) {
+            if (oldLocation != null) {
+                map.clear(); // Clear all markers
+            }
+            LatLng newLocation = new LatLng(latitude, longitude);
+                map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+                map.addMarker(new MarkerOptions()
+                        .position(newLocation)
+                        .title("老人位置")
+                        .snippet("詳細訊息..."));
+                map.moveCamera(CameraUpdateFactory.newLatLngZoom(newLocation, 15));
+                oldLocation=newLocation;
+        }
+    }
+
+    @Override
+    public void onMapReady(@NonNull GoogleMap googleMap) {
+        map = googleMap; // Assign the GoogleMap object to the member variable
+
+        LatLng location = new LatLng(GpsJD, GpsWD);
+        map.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+        map.addMarker(new MarkerOptions()
+                .position(location)
+                .title("老人位置")
+                .snippet("詳細訊息..."));
+        map.moveCamera(CameraUpdateFactory.newLatLngZoom(location, 15));
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -278,27 +306,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
         mapView.onDestroy();
     }
 
-    private GoogleMap map; // Declare a member variable to hold the GoogleMap object
-
-    // Function to update the map's location
-    private void updateMapLocation(double latitude, double longitude) {
-        if (map != null) {
-            LatLng newLocation = new LatLng(latitude, longitude);
-            map.moveCamera(CameraUpdateFactory.newLatLngZoom(newLocation, 15));
-        }
+    private double roundToDecimalPlaces(double value, int decimalPlaces) {
+        double scale = Math.pow(10, decimalPlaces);
+        return Math.round(value * scale) / scale;
     }
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
-        // Get the GoogleMap object and assign it to the member variable
-        map = googleMap;
-
-        // You can also customize the map settings here
-
-        // Example usage of the updateMapLocation function:
-        double newLatitude = 25.12345; // Update with your new latitude
-        double newLongitude = 121.67890; // Update with your new longitude
-        updateMapLocation(newLatitude, newLongitude);
-    }
-
 }
