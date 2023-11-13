@@ -48,3 +48,18 @@
 2. 在 Sketch -> include library -> add .Zip library 依序新增 雲端資料中 BaiduNetdiskDownload\014.基于arduino智能拐杖\用到的库 的所有內容
 
 3. 接下來的部分如果有需要再新增說明做法
+
+#備註!!!
+
+##anroid app 重要檔案索引位置
+1. [AndroidManifest.xml](app/src/main/AndroidManifest.xml):
+    用來設定使用到的ui及他的java檔
+    設定API keys
+    設定permission
+2. [MainActivity.java](app/src/main/java/com/example/aliyun_mqtt/MainActivity.java)
+    main的java檔
+3. [activity_main.xml](app/src/main/res/layout/activity_main.xml)
+    main的xml(UI)檔
+4.[AliyunIoTSignUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/AliyunIoTSignUtil.java)
+
+5.[NumberConvertUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/NumberConvertUtil.java)
