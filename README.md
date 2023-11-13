@@ -68,21 +68,15 @@
 # 實機畫面
 ![螢幕擷取畫面 2023-11-13 190206](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/3d4abcf7-1d2e-478b-832d-228847515d9c)
 # 電路圖
-
-# 元件
 ![未命名](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/05bd4b87-a152-43c6-9f0b-be84c57c6573)
-
+# 元件
 # 1. board: esp32-s3
 ![Q1](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/ea28c6d1-2dfa-41c4-a2f4-1f30d4899513)
-
 # 2. 6-Axis Accel & Gyro Sensor: mpu6050
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/19846bf0-3e2c-41a1-aa43-b7c62f292ee8)
-
 # 3. passive buzzer module 
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/b8a4919f-8bdc-4d00-9761-de6a885b65d2)
-
 # 4. GPS Module Receiver: GT-U7 
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/333f792e-d47d-453c-8393-5a78c1a699d2)
-
 # 5. Ultrasonic Distance Sensor: HC-SR04 
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/7a12d8db-a872-4dd2-bfe6-60e51e008e18)
