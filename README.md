@@ -56,9 +56,9 @@
     用來設定使用到的ui及他的java檔
     設定API keys
     設定permission
-2. [MainActivity.java](app/src/main/java/com/example/aliyun_mqtt/MainActivity.java)
+2. [MainActivity.java](app/src/main/java/com/example/aliyun_mqtt/MainActivity.java):
     main的java檔
-3. [activity_main.xml](app/src/main/res/layout/activity_main.xml)
+3. [activity_main.xml](app/src/main/res/layout/activity_main.xml):
     main的xml(UI)檔
     
 4. [AliyunIoTSignUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/AliyunIoTSignUtil.java)
