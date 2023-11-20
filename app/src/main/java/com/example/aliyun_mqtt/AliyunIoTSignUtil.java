@@ -10,11 +10,11 @@ import javax.crypto.spec.SecretKeySpec;
 public class AliyunIoTSignUtil {
 
     public static String sign(Map<String, String> params, String deviceSecret, String signMethod) {
-        //将参数Key按字典顺序排序
+        //將參數Key按a-z顺序排序
         String[] sortedKeys = params.keySet().toArray(new String[] {});
         Arrays.sort(sortedKeys);
 
-        //生成规范化请求字符串
+        //生成標準化请求string
         StringBuilder canonicalizedQueryString = new StringBuilder();
         for (String key : sortedKeys) {
             if ("sign".equalsIgnoreCase(key)) {
