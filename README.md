@@ -65,7 +65,7 @@
     main的xml(UI)檔
     
 4. [AliyunIoTSignUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/AliyunIoTSignUtil.java) 用來對客戶端設備進行身份驗證。驗證客戶端設備是否有權訪問該MQTT代理。
-5. [NumberConvertUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/NumberConvertUtil.java)
+5. [NumberConvertUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/NumberConvertUtil.java) 以2位數保存資料型態為doble、float的小數部分
 
 # 實機畫面
 ![螢幕擷取畫面 2023-11-13 190206](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/3d4abcf7-1d2e-478b-832d-228847515d9c)
