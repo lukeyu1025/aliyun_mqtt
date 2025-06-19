@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private String deviceSecret = "e67c0997ae26d398623fcc0bb200dae2";
 
 
-    private final String pub_topic = "/sys/a13IoObfD0G/ZNGZ_APP/thing/event/property/post ";
+    // 發佈事件的 topic，尾端多餘的空格會造成 MQTT 發佈失敗
+    private final String pub_topic = "/sys/a13IoObfD0G/ZNGZ_APP/thing/event/property/post";
     private final String sub_topic = "/sys/a13IoObfD0G/ZNGZ_APP/thing/service/property/set";
 
     private double GpsJD =0;
@@ -109,8 +110,9 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                             JSONObject obj_JL = items.getJSONObject("D_SR04");
                             JSONObject obj_SDfg = items.getJSONObject("SD_FG");
 
-                            GpsJD =  obj_GPS_WD.getDouble("value");
-                            GpsWD =  obj_GPS_JD.getDouble("value");
+                            // 經緯度的賦值在原實作中相反，導致地圖定位錯誤
+                            GpsWD =  obj_GPS_WD.getDouble("value");
+                            GpsJD =  obj_GPS_JD.getDouble("value");
                             JL= (float)obj_JL.getDouble("value");
                             SDfg=obj_SDfg.getInt("value");
 
