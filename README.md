@@ -82,3 +82,7 @@
 ![螢幕擷取畫面 2023-11-13 200740](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/d13c9c77-c50f-4c68-91eb-666046db5f90)
 5. Ultrasonic Distance Sensor: HC-SR04 </br>
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/7a12d8db-a872-4dd2-bfe6-60e51e008e18)
+
+## License
+This project is licensed under the terms of the [MIT License](LICENSE).
+
