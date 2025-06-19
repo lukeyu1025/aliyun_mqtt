@@ -82,3 +82,25 @@
 ![螢幕擷取畫面 2023-11-13 200740](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/d13c9c77-c50f-4c68-91eb-666046db5f90)
 5. Ultrasonic Distance Sensor: HC-SR04 </br>
 ![image](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/7a12d8db-a872-4dd2-bfe6-60e51e008e18)
+
+## Running Unit Tests
+
+在開發過程中您可以透過 Gradle 執行單元測試。請在專案根目錄執行下列指令：
+
+```bash
+./gradlew test
+```
+
+Gradle 會自動編譯並執行 `test` 目錄中的所有 JUnit 測試案例。
+
+## Credential Setup
+
+專案中的部分功能需要連線至 Aliyun MQTT 服務，必須提供 `productKey`、`deviceName` 以及 `deviceSecret` 等資訊。為了避免憑證外洩，請在專案根目錄建立 `local.properties` 檔並輸入下列內容：
+
+```properties
+productKey=YOUR_PRODUCT_KEY
+deviceName=YOUR_DEVICE_NAME
+deviceSecret=YOUR_DEVICE_SECRET
+```
+
+`local.properties` 已加入 `.gitignore`，不會被提交到版本控制中。請依照實際情況填入您的憑證後再執行應用程式與測試。
