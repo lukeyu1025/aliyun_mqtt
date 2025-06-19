@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private String deviceSecret = "e67c0997ae26d398623fcc0bb200dae2";
 
 
-    private final String pub_topic = "/sys/a13IoObfD0G/ZNGZ_APP/thing/event/property/post ";
+    private final String pub_topic = "/sys/a13IoObfD0G/ZNGZ_APP/thing/event/property/post";
     private final String sub_topic = "/sys/a13IoObfD0G/ZNGZ_APP/thing/service/property/set";
 
     private double GpsJD =0;
