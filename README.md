@@ -60,14 +60,19 @@ From the project directory you can run:
 ## Components
 
 1. **Board:** ESP32-S3
+
    ![ESP32-S3](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/07170907-84ac-4518-922b-6bccf5cb4afe)
 2. **6-Axis Accel & Gyro Sensor:** MPU6050
+
    ![MPU6050](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/19846bf0-3e2c-41a1-aa43-b7c62f292ee8)
 3. **Passive Buzzer Module**
+
    ![Buzzer](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/b8a4919f-8bdc-4d00-9761-de6a885b65d2)
 4. **GPS Module Receiver:** GT-U7
+
    ![GT-U7](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/d13c9c77-c50f-4c68-91eb-666046db5f90)
 5. **Ultrasonic Distance Sensor:** HC-SR04
+
    ![HC-SR04](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/7a12d8db-a872-4dd2-bfe6-60e51e008e18)
 
 ## License
