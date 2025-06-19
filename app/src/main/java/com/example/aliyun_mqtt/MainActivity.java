@@ -203,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
                     msg.what = 3;   //收到消息标志位
                     msg.obj =message.toString();
                     //发送messge到handler
-                    handler.sendMessage(msg);    // hander 回传
+                    handler.sendMessage(msg);    // handler 回传
                 }
             });
         } catch (Exception e) {
