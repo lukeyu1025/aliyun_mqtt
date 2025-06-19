@@ -44,13 +44,13 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private ScheduledExecutorService scheduler;
 
 
-    private String productKey = "a13IoObfD0G";
-    private String deviceName = "ZNGZ_APP";
-    private String deviceSecret = "e67c0997ae26d398623fcc0bb200dae2";
+    private String productKey = BuildConfig.PRODUCT_KEY;
+    private String deviceName = BuildConfig.DEVICE_NAME;
+    private String deviceSecret = BuildConfig.DEVICE_SECRET;
 
 
-    private final String pub_topic = "/sys/a13IoObfD0G/ZNGZ_APP/thing/event/property/post ";
-    private final String sub_topic = "/sys/a13IoObfD0G/ZNGZ_APP/thing/service/property/set";
+    private final String pub_topic = "/sys/" + BuildConfig.PRODUCT_KEY + "/" + BuildConfig.DEVICE_NAME + "/thing/event/property/post ";
+    private final String sub_topic = "/sys/" + BuildConfig.PRODUCT_KEY + "/" + BuildConfig.DEVICE_NAME + "/thing/service/property/set";
 
     private double GpsJD =0;
     private double GpsWD =0;
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements OnMapReadyCallbac
     private void mqtt_init() {
         try {
 
-            String clientId = "a1MoTKOqkVK.test_device1";
+            String clientId = BuildConfig.CLIENT_ID;
             Map<String, String> params = new HashMap<String, String>(16);
             params.put("productKey", productKey);
             params.put("deviceName", deviceName);

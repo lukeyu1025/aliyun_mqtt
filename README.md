@@ -67,6 +67,21 @@
 4. [AliyunIoTSignUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/AliyunIoTSignUtil.java) 用來對客戶端設備進行身份驗證。驗證客戶端設備是否有權訪問該MQTT代理。
 5. [NumberConvertUtil.java還沒研究](app/src/main/java/com/example/aliyun_mqtt/NumberConvertUtil.java) 以2位數保存資料型態為doble、float的小數部分
 
+### 本地開發密鑰設定
+
+本專案將敏感資訊存放於 `local.properties` 檔案中，此檔案已被 `.gitignore` 排除，不會被提交到版本控制。
+在專案根目錄建立 `local.properties`，並提供以下鍵值：
+
+```
+productKey=YOUR_PRODUCT_KEY
+deviceName=YOUR_DEVICE_NAME
+deviceSecret=YOUR_DEVICE_SECRET
+clientId=YOUR_CLIENT_ID
+googleMapsApiKey=YOUR_GOOGLE_MAPS_API_KEY
+```
+
+將 `YOUR_*` 依實際值替換，即可在本地環境編譯及執行。
+
 # 實機畫面
 ![螢幕擷取畫面 2023-11-13 190206](https://github.com/lukeyu1025/aliyun_mqtt/assets/74660025/3d4abcf7-1d2e-478b-832d-228847515d9c)
 # 電路圖

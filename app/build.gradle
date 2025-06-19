@@ -2,6 +2,12 @@ plugins {
     id 'com.android.application'
 }
 
+def localProps = new Properties()
+def localPropsFile = rootProject.file('local.properties')
+if (localPropsFile.exists()) {
+    localPropsFile.withInputStream { localProps.load(it) }
+}
+
 android {
     namespace 'com.example.aliyun_mqtt'
     compileSdk 33
@@ -14,6 +20,12 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'PRODUCT_KEY', '"' + (localProps['productKey'] ?: '') + '"'
+        buildConfigField 'String', 'DEVICE_NAME', '"' + (localProps['deviceName'] ?: '') + '"'
+        buildConfigField 'String', 'DEVICE_SECRET', '"' + (localProps['deviceSecret'] ?: '') + '"'
+        buildConfigField 'String', 'CLIENT_ID', '"' + (localProps['clientId'] ?: '') + '"'
+        manifestPlaceholders = [GOOGLE_MAPS_API_KEY: (localProps['googleMapsApiKey'] ?: '')]
     }
 
     buildTypes {
